@@ -16,10 +16,10 @@ foreach ($file in $files) {
     If($bitDepth -eq 1) {
         Write-Output "run 1-bit convert here"
         # Todo
-        & "echo" "arguments $fileName" 
+        & "echo" "your-arguments $fileName" 
     } else {
         Write-Output "run convert for all other bit depths here"
         # Todo
-        & "echo" "arguments $fileName" 
+        & "echo" "your-arguments $fileName" 
     }
 }
