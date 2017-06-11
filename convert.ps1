@@ -12,7 +12,7 @@ foreach ($file in $files) {
     # $command = "identify"
     # $cmdArgs = "-format '%[depth]' $fileName"
     
-    $bitDepth = & $command $cmdArgs
+    $bitDepth = & $command $cmdArgs.Split(" ")
     If($bitDepth -eq 1) {
         Write-Output "run 1-bit convert here"
         # Todo

@@ -7,8 +7,8 @@ foreach ($file in $files) {
     Write-Output "convert: $fileName"
 
     $command = "docker"
-    $cmdArgs = 'run --rm -v "$(pwd)/input:/input:ro" -v "$(pwd)/output:/output" kl4n4/tiff-identify-bitdepth $fileName'
-    $bitDepth = & $command $cmdArgs
+    $cmdArgs = "run --rm -v '$(pwd)/input:/input:ro' -v '$(pwd)/output:/output' kl4n4/tiff-identify-bitdepth $fileName"
+    $bitDepth = & $command $cmdArgs.Split(" ")
     If($bitDepth -eq 1) {
         Write-Output "run 1-bit convert here"
         # Todo
